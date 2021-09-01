@@ -71,7 +71,17 @@ $('#main_navigation a, a.anchor-link, footer ul.navigation a').click(function (e
         headerSize = 73;
     }
 
+    changeHashWithoutScrolling(target);
+
     $('html, body').animate({
         scrollTop: $(target).offset().top - headerSize
     }, 300);
 });
+
+function changeHashWithoutScrolling(hash) {
+    const id = hash.replace(/^.*#/, '')
+    const elem = document.getElementById(id)
+    elem.id = `${id}-tmp`
+    window.location.hash = hash
+    elem.id = id
+}
