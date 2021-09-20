@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.messages" destination="page.wrapper" after="top.page" />
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="footer-container" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true" />
+        <referenceBlock name="header.search" remove="true" />
+        <referenceBlock name="minicart" remove="true" />
+        <referenceBlock name="store_switcher" remove="true" />
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="copyright" remove="true" />
+        <referenceBlock name="navigation.sections" remove="true" />
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="sale.reorder.sidebar" remove="true" />
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="header" template="AudereCommerce_AudereCommerce::html/header.phtml" before="-" />
+            <container name="top.page" htmlClass="top-page" htmlTag="div" before="main.content" />
+            <container name="bottom.page" htmlClass="bottom-page" htmlTag="div" after="main.content" />
+            <container name="footer-wrapper" htmlTag="footer" htmlClass="page-footer">
+                <block class="Magento\Framework\View\Element\Template" name="footer.content" template="AudereCommerce_AudereCommerce::html/footer.phtml" />
+            </container>
+        </referenceContainer>
+    </body>
+</page>

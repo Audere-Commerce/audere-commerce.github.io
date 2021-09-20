@@ -1,0 +1,76 @@
+<?php /* @var $block Magento\Framework\View\Element\Template */ ?>
+<div class="page-main footer-content">
+    <div class="footer-columns">
+        <div class="col contact-col">
+            <div class="title"><?php echo __('Get in Touch'); ?></div>
+            <ul class="contact-details">
+                <li class="address">
+                    <div class="icon"></div>
+                    <span>Audere Commerce, Monkswell House, Monkswell park, Knaresborough HG5 8NQ</span>
+                </li>
+                <li class="email">
+                    <div class="icon"></div>
+                    <a href="mailto:contact@auderecommerce.com">contact@auderecommerce.com</a>
+                </li>
+                <li class="phone">
+                    <div class="icon"></div>
+                    <a href="tel:03330116909">0333 011 6909</a>
+                </li>
+            </ul>
+            <a href="<?php echo $block->getUrl('contact'); ?>" class="action primary" title="<?php echo __('Contact Us'); ?>">
+                <span><?php echo __('Contact Us'); ?></span>
+            </a>
+        </div>
+        <div class="col links-col">
+            <div class="title">Audere Commerce</div>
+            <ul class="footer-nav" >
+                <li><a href="<?php echo $block->getUrl(''); ?>#experience" title="Experience">Experience</a></li>
+                <li><a href="<?php echo $block->getUrl(''); ?>#markets_served" title="Markets served">Markets served</a></li>
+                <li><a href="<?php echo $block->getUrl(''); ?>#services" title="Services">Services</a></li>
+                <li><a href="<?php echo $block->getUrl(''); ?>#approach" title="Approach">Approach</a></li>
+                <li><a href="<?php echo $block->getUrl(''); ?>#results" title="Results">Results</a></li>
+                <li><a href="<?php echo $block->getUrl(''); ?>#about" title="About">About</a></li>
+            </ul>
+        </div>
+        <div class="col features-col">
+            <div class="footer-logo-wrapper">
+                <img src="<?php echo $block->getViewFileUrl('images/logo.svg'); ?>" class="footer-logo" alt="Audere Commerce" />
+            </div>
+            <a href="#" class="feature-box blog">
+                <span class="icon">
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/blog.svg'); ?>" alt="Blog" />
+                </span>
+                <span class="text">
+                    <span class="feature-title">Blog</span>
+                    <span class="description">Some description about our blog goes here.</span>
+                </span>
+            </a>
+            <a href="#" class="feature-box knowledge-base">
+                <span class="icon">
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/knowledge-base.svg'); ?>" alt="Knowledge Base" />
+                </span>
+                <span class="text">
+                    <span class="feature-title">Knowledge Base</span>
+                    <span class="description">Some description about our knowledge base goes here.</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="bottom-footer">
+    <div class="page-main">
+        <div class="bottom-footer-content">
+            <img src="<?php echo $block->getViewFileUrl('images/logo-icon.svg'); ?>" class="logo-icon item" alt="Audere Commerce Logo Icon" />
+            <a href="" class="social-link twitter item" title="Visit our Twitter"></a>
+            <a href="" class="social-link linked-in item" title="Visit our LinkedIn"></a>
+        </div>
+        <div class="copyright">Copyright &copy; <?php echo date('Y'); ?> Audere Commerce Limited. All rights reserved</div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "js/audere": {}
+        }
+    }
+</script>
