@@ -2512,7 +2512,9 @@ body.mobile-sidebar-visible {
     .page-header {
         position: fixed;
         .logo {
-            width: 230px;
+            @media (min-width: @screen__xl) {
+                width: 230px;
+            }
         }
         &.fixed {
             background-color: rgba(29, 46, 53, 0.92);
