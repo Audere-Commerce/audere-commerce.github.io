@@ -1,0 +1,46 @@
+<?php /* @var $block AudereCommerce\KnowledgeBase\Block\Post\View */ ?>
+<?php /* @var $helper AudereCommerce\KnowledgeBase\Helper\KnowledgeBase */ ?>
+<?php $helper = $this->helper('AudereCommerce\KnowledgeBase\Helper\KnowledgeBase'); ?>
+<?php $post = $block->getPost(); ?>
+<?php /* @var $post AudereCommerce\KnowledgeBase\Api\Data\PostInterface */ ?>
+<div class="top-banner">
+    <?php echo $block->getBlockHtml('page.main.title'); ?>
+    <?php if ($image = $helper->getPostImage('main_image', $post)): ?>
+        <img src="<?php echo $image; ?>" alt="<?php echo $post->getTitle(); ?>" class="image" />
+    <?php endif; ?>
+</div>
+<div class="page-main information-container">
+    <div class="post-overview">
+        <div class="introduction col">
+            <div class="content"><?php echo $helper->outputHtml($post->getPostIntroduction()); ?></div>
+        </div>
+        <div class="information col">
+            <div class="content">
+                <h3 class="title"><?php echo __('Post Details'); ?></h3>
+                <ul class="details">
+                    <li>
+                        <b><?php echo __('Contractor'); ?></b>
+                        <span><?php echo $post->getContractorName(); ?></span>
+                    </li>
+                    <li>
+                        <b><?php echo __('Architect'); ?></b>
+                        <span><?php echo $post->getArchitectName(); ?></span>
+                    </li>
+                    <li>
+                        <b><?php echo __('Post Address'); ?></b>
+                        <span><?php echo $post->getPostAddress(); ?></span>
+                    </li>
+                </ul>
+                <div class="post-consultant">
+                    <div class="consultant-image-wrapper">
+                        <div class="image" style="background-image: url(<?php echo $helper->getPostImage('post_consultant_image', $post); ?>);"></div>
+                    </div>
+                    <div class="text">
+                        <b><?php echo __('Post Consultant'); ?></b>
+                        <span><?php echo $post->getPostConsultantName(); ?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

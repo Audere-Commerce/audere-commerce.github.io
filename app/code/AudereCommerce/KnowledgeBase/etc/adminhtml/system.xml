@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="auderecommerce_tab" translate="label" sortOrder="0">
+            <label>Audere Commerce</label>
+        </tab>
+        <section id="knowledgebase" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>auderecommerce_tab</tab>
+            <resource>AudereCommerce_PyroEcho::config_pyroecho</resource>
+            <label>KnowledgeBase</label>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="top_fullwidth_image" translate="label" type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="10" showInDefault="1" showInWebsite="1" >
+                    <label>Top Fullwidth Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\File</backend_model>
+                    <upload_dir config="system" scope_info="1">banners</upload_dir>
+                    <comment>Image displayed at the top of the knowledgebase listing page.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

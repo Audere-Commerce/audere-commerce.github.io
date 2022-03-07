@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table comment="Post" engine="innodb" name="auderecommerce_knowledgebase_post" resource="default">
+		<column comment="Entity Id" identity="true" name="id" nullable="false" padding="6" unsigned="false" xsi:type="smallint"/>
+		<constraint referenceId="PRIMARY" xsi:type="primary">
+			<column name="id"/>
+		</constraint>
+		<column name="title" nullable="false" xsi:type="text"/>
+		<column name="url_key" nullable="false" xsi:type="text"/>
+		<column name="category" nullable="true" unsigned="false" xsi:type="int"/>
+		<column name="listing_image" nullable="true" xsi:type="text"/>
+		<column name="main_image" nullable="true" xsi:type="text"/>
+		<column name="short_description" nullable="true" xsi:type="text"/>
+		<column name="content" nullable="false" xsi:type="text"/>
+        <column name="meta_title" nullable="true" xsi:type="text"/>
+        <column name="meta_description" nullable="true" xsi:type="text"/>
+        <column name="meta_keywords" nullable="true" xsi:type="text"/>
+		<column name="enabled" nullable="false" default="1" unsigned="false" xsi:type="int"/>
+        <column name="sort_order" nullable="true" xsi:type="int"/>
+		<column name="created_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created At"/>
+		<column name="updated_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated At"/>
+	</table>
+	<table comment="Post Category" engine="innodb" name="auderecommerce_knowledgebase_category" resource="default">
+		<column comment="Entity Id" identity="true" name="id" nullable="false" padding="6" unsigned="false" xsi:type="smallint"/>
+		<constraint referenceId="PRIMARY" xsi:type="primary">
+			<column name="id"/>
+		</constraint>
+        <column name="title" nullable="false" xsi:type="text"/>
+        <column name="description" nullable="true" xsi:type="text"/>
+        <column name="icon_image" nullable="true" xsi:type="text"/>
+		<column name="url_key" nullable="true" xsi:type="text"/>
+        <column name="parent_id" nullable="true" xsi:type="int"/>
+        <column name="sort_order" nullable="true" xsi:type="int"/>
+	</table>
+	<table comment="KnowledgeBase Blog Post Relation" engine="innodb" name="auderecommerce_knowledgebase_blog_post" resource="default">
+		<column comment="Entity Id" identity="true" name="id" nullable="false" padding="6" unsigned="false" xsi:type="smallint"/>
+		<constraint referenceId="PRIMARY" xsi:type="primary">
+			<column name="id"/>
+		</constraint>
+		<column name="post_id" nullable="false" unsigned="false" xsi:type="int"/>
+		<column name="product_id" nullable="false" unsigned="false" xsi:type="int"/>
+	</table>
+</schema>

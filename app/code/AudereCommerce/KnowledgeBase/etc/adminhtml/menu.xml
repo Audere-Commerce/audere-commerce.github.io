@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AudereCommerce_KnowledgeBase::knowledgebase" title="Knowledge Base" translate="title" module="AudereCommerce_KnowledgeBase" sortOrder="0" parent="Magento_Backend::content" resource="AudereCommerce_KnowledgeBase::knowledgebase" />
+        <add id="AudereCommerce_KnowledgeBase::knowledgebase_post" title="Posts" translate="title" module="AudereCommerce_KnowledgeBase" sortOrder="20" parent="AudereCommerce_KnowledgeBase::knowledgebase" action="knowledgebase/post" resource="AudereCommerce_KnowledgeBase::post" />
+        <add id="AudereCommerce_KnowledgeBase::knowledgebase_category" title="Categories" translate="title" module="AudereCommerce_KnowledgeBase" sortOrder="30" parent="AudereCommerce_KnowledgeBase::knowledgebase" action="knowledgebase/category" resource="AudereCommerce_KnowledgeBase::category" />
+    </menu>
+</config>

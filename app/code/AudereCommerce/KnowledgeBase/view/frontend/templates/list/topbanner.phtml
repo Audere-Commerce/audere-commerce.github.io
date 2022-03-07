@@ -1,0 +1,27 @@
+<?php /* @var $block AudereCommerce\KnowledgeBase\Block\Template */ ?>
+<?php /* @var $helper AudereCommerce\KnowledgeBase\Helper\KnowledgeBase */ ?>
+<?php $helper = $this->helper('AudereCommerce\KnowledgeBase\Helper\KnowledgeBase'); ?>
+<div class="fullwidth-top-bar">
+    <img src="<?php echo $block->getTopFullwidthImage(); ?>" alt="<?php echo __('Pyro + Echo KnowledgeBase'); ?>" />
+</div>
+<?php if ($categories = $helper->getPostCategories()): ?>
+    <div class="page-main">
+        <div class="categories-wrapper">
+            <ul class="categories">
+                <?php foreach ($categories as $category): ?>
+                    <li class="item">
+                        <?php if ($helper->isCategoryActive($category->getId())): ?>
+                            <a href="<?php echo $block->getUrl('knowledgebase'); ?>" class="active">
+                                <span><?php echo $category->getTitle(); ?></span>
+                            </a>
+                        <?php else: ?>
+                            <a href="<?php echo $helper->createCategoryUrl($category->getId()); ?>">
+                                <span><?php echo $category->getTitle(); ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+<?php endif; ?>

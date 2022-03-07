@@ -3,15 +3,17 @@
     <div class="banner-background-image" style="background-image: url(<?php echo $block->getViewFileUrl('images/main-banner-bg.jpg'); ?>"></div>
     <div class="content">
         <div class="text-container">
-            <h1 class="banner-title">We build online shops for <span class="highlight">B2B</span></h1>
+            <h1 class="banner-title">We build effective e-commerce solutions for professionals in <span class="highlight">B2B</span> and <span class="highlight">B2C</span></h1>
             <div class="title-divider white">
                 <div class="line"></div>
                 <div class="circles"></div>
                 <div class="line"></div>
             </div>
-            <div class="description">Since 2013 we’ve worked with clients ranging in size from a few million turnover family-run businesses, to subsidiaries of multi-billion publicly traded organisations.</div>
-            <a href="https://forms.gle/Tg1NX1gAdPkHPLoHA" class="action primary" title="Get an actionable plan for your business" target="_blank">
-                <span>Get an actionable plan for your business</span>
+            <div class="description">
+                <p>Since 2013 we’ve worked with directors, marketers and sales teams from organisations ranging in size from SME family-run businesses, to subsidiaries of multi-billion publicly traded organisations.</p>
+            </div>
+            <a href="<?php echo $block->getUrl('contact'); ?>" class="action primary" title="Get in touch with our team today">
+                <span>Get in touch with our team today</span>
             </a>
         </div>
         <div class="browser-screenshot-container banner-image">
@@ -20,6 +22,7 @@
         </div>
     </div>
 </div>
+<?php echo $block->getChildHtml('page.messages'); ?>
 <div class="fullwidth-blue" id="experience">
     <div class="page-main section">
         <div class="section-intro-container">
@@ -31,7 +34,7 @@
                 <div class="circles"></div>
                 <div class="line"></div>
             </div>
-            <div class="description">Despite a challenging environment during <b>2020</b>, many of our clients saw significant online sales improvement:</div>
+            <div class="description">Despite a challenging environment since 2020, we have helped our clients achieve:</div>
         </div>
         <div class="featured-numbers">
             <div class="feature">
@@ -89,63 +92,75 @@
     </div>
 </div>
 <div class="fullwith" id="markets_served">
-    <div class="page-main section">
+    <div class="section">
         <div class="section-intro-container">
             <h2 class="section-title center">
-                <span>Markets served</span>
+                <span>Our work</span>
             </h2>
             <div class="title-divider center">
                 <div class="line"></div>
                 <div class="circles"></div>
                 <div class="line"></div>
             </div>
-            <div class="description">We work with a range of B2B clients, with a primary focus on automotive aftermarket and components, and construction materials, products, and tools.</div>
+            <div class="description">We help directors, managing directors, marketing professionals, business developers and sales teams in B2B and B2C solve business problems using technology and e-commerce.</div>
         </div>
         <div class="case-studies-outer-wrapper">
-            <div class="swiper-container case-study-slider">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide trimline">
+            <div class="case-study-slider">
+                <ul class="case-study-list">
+                    <li class="case-study-item trimline">
                         <div class="case-study-container">
                             <div class="image-container">
-                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/trimline.png'); ?>" alt="Trimline Group Ltd. screenshot" class="screenshot" />
+                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/trimline/background-shapes.svg'); ?>" class="background-shapes" alt="Trimline background shapes" />
+                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/trimline/screenshot.png'); ?>" alt="Trimline Group Ltd. screenshot" class="screenshot" />
                             </div>
                             <div class="text-container">
-                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/trimline.svg'); ?>" alt="Trimline Group Ltd. logo" class="client-logo" />
-                                <div class="title">Trimline Group Ltd.</div>
-                                <div class="description">Established in 1980, Trimline is a leading supplier to customers in the tiling industry. A third generation family business, they excel at time-sensitive projects and taking on technically tough challenges.</div>
-                                <a href="https://www.trimlinegroup.com/" class="action primary" target="_blank">
-                                    <span>Visit Website</span>
-                                </a>
+                                <div class="content">
+                                    <div class="title">Trimline Group Ltd.</div>
+                                    <div class="subheading">Magento 2 Project</div>
+                                    <div class="description">We worked with Trimline’s marketing team and won them the award for best e-commerce website in their industry. During this project we built a completely bespoke reward scheme that as of early 2022 has processed over £33.3m worth of trade and at present, we are working with the team to launch an exciting new subrand.</div>
+                                    <a href="https://www.trimlinegroup.com/" class="action primary" target="_blank">
+                                        <span>Visit Website</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </li>
-                    <li class="swiper-slide venhill">
+                    <li class="case-study-item howsafe">
                         <div class="case-study-container">
                             <div class="image-container">
-                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/venhill.png'); ?>" alt="Venhill Engineering screenshot" class="screenshot" />
+                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/howsafe/background-shapes.svg'); ?>" class="background-shapes" alt="Howsafe background shapes" />
+                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/howsafe/screenshot.png'); ?>" alt="Howsafe screenshot" class="screenshot" />
                             </div>
                             <div class="text-container">
-                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/venhill.svg'); ?>" alt="Venhill Engineering logo" class="client-logo" />
-                                <div class="title">Venhill Engineering</div>
-                                <div class="description">For 50 years Venhill has been manufacturing control cables, hydraulic hoses and brake lines for Motorbikes, Quad Bikes, Cars, Karts and many other applications. Their hoses and cables are made in the UK to the highest possible standard, and used internationally.</div>
-                                <a href="https://www.venhill.co.uk/" class="action primary" target="_blank">
-                                    <span>Visit Website</span>
-                                </a>
+                                <div class="content">
+                                    <div class="title">Howsafe</div>
+                                    <div class="subheading">Magento 2 Project</div>
+                                    <div class="description">Working with the director and sales manager to keep the business at the forefront of the industry, we improved the customer experience by using software most modern customers' look for during their journey, such as FAQS, product features, related products, reviews and product customisations.</div>
+                                    <a href="https://www.howsafe.co.uk/" class="action primary" target="_blank">
+                                        <span>Visit Website</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </li>
-                    <li class="swiper-slide howsafe">
+                    <li class="case-study-item venhill">
                         <div class="case-study-container">
                             <div class="image-container">
-                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/howsafe.png'); ?>" alt="Howsafe screenshot" class="screenshot" />
+                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/venhill/background-shapes.svg'); ?>" class="background-shapes" alt="Venhill Engineering background shapes" />
+                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/venhill/screenshot.png'); ?>" alt="Venhill Engineering screenshot" class="screenshot" />
                             </div>
                             <div class="text-container">
-                                <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/howsafe.svg'); ?>" alt="Howsafe logo" class="client-logo" />
-                                <div class="title">Howsafe</div>
-                                <div class="description">Howsafe offer personal protective equipment, protective clothing, safety gloves, safety equipment & safety wear solutions for all industries. The family-run business was established in 1978 in Peterborough. They sell online, via their safety shop, and their unique mobile showroom and delivery service.</div>
-                                <a href="https://www.howsafe.co.uk/" class="action primary" target="_blank">
-                                    <span>Visit Website</span>
-                                </a>
+                                <div class="content">
+                                    <div class="title">Venhill Engineering</div>
+                                    <div class="subheading">Magento 2 Project</div>
+                                    <div class="description">
+                                        <p>Working with the director and operations manager on this project, we built a bespoke line builder to allow customers to create their own products and likewise a part finder to improve the ease of use when searching for specific products.</p>
+                                        <p>This was a further addition to using software most modern customers' look for during their journey, such as FAQS, product features, related products, reviews and product customisations.</p>
+                                    </div>
+                                    <a href="https://venhill.co.uk/" class="action primary" target="_blank">
+                                        <span>Visit Website</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -166,49 +181,89 @@
                 </li>
                 <li class="swiper-slide logo-thumbnail-container">
                     <div class="inner-wrapper">
-                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/venhill.svg'); ?>" class="normal-logo" alt="Venhill Engineering logo" />
-                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/venhill-grey.svg'); ?>" class="grey-logo" alt="Venhill Engineering grey logo" />
+                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/howsafe.svg'); ?>" class="normal-logo" alt="Howsafe logo" />
+                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/howsafe-grey.svg'); ?>" class="grey-logo" alt="Howsafe grey logo" />
                     </div>
                 </li>
                 <li class="swiper-slide logo-thumbnail-container">
                     <div class="inner-wrapper">
-                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/howsafe.svg'); ?>" class="normal-logo" alt="Howsafe logo" />
-                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/howsafe-grey.svg'); ?>" class="grey-logo" alt="Howsafe grey logo" />
+                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/venhill.svg'); ?>" class="normal-logo" alt="Venhill Engineering logo" />
+                        <img src="<?php echo $block->getViewFileUrl('images/case-studies/logos/venhill-grey.svg'); ?>" class="grey-logo" alt="Venhill Engineering grey logo" />
                     </div>
                 </li>
             </ul>
         </div>
         <script>
             requirejs(['jquery', 'js/lib/swiper'], function($, Swiper) {
-                var caseStudiesSlider = new Swiper('.case-study-slider', {
-                    speed: 600,
-                    spaceBetween: 100,
-                    navigation: {
-                        prevEl: '.case-study-slider-left',
-                        nextEl: '.case-study-slider-right'
-                    }
-                });
-                var caseStudiesSliderThumbs = new Swiper('.case-study-thumbnails', {
-                    spaceBetween: 10,
-                    preventClicks: false,
-                    preventClicksPropagation: false,
-                    slideToClickedSlide: true,
-                    centeredSlides: true,
-                    slidesPerView: 'auto',
-                    shortSwipes: false,
-                    longSwipes: true,
-                    longSwipesRatio: 1,
-                    roundLengths: true,
-                    speed: 600,
-                    allowTouchMove: false,
-                    breakpoints: {
-                        768: {
-                            spaceBetween: 20
+                var lastCaseStudyState;
+
+                var responsiveCaseStudy = {
+                    onResize: function () {
+                        $(window).resize(function () {
+                            responsiveCaseStudy.checkWidth();
+                        });
+                    },
+                    checkWidth: function () {
+                        if (window.innerWidth >= 768) {
+                            if (lastCaseStudyState !== 'desktop') {
+                                lastCaseStudyState = 'desktop';
+                                responsiveCaseStudy.desktop();
+                            }
+                        } else {
+                            if (lastCaseStudyState !== 'mobile') {
+                                lastCaseStudyState = 'mobile';
+                                responsiveCaseStudy.mobile();
+                            }
                         }
+                    },
+                    desktop: function () {
+                        $('.case-study-slider').removeClass('swiper-container')
+                            .find('ul').removeClass('swiper-wrapper')
+                            .find('li').removeClass('swiper-slide');
+                        $('.case-study-slider *').removeAttr('style');
+                    },
+                    mobile: function () {
+                        $('.case-study-slider').addClass('swiper-container')
+                            .find('ul').addClass('swiper-wrapper')
+                            .find('li').addClass('swiper-slide');
+                        var caseStudiesSlider = new Swiper('.case-study-slider', {
+                            speed: 600,
+                            spaceBetween: 100,
+                            roundLengths: true,
+                            navigation: {
+                                prevEl: '.case-study-slider-left',
+                                nextEl: '.case-study-slider-right'
+                            }
+                        });
+                        var caseStudiesSliderThumbs = new Swiper('.case-study-thumbnails', {
+                            spaceBetween: 10,
+                            preventClicks: false,
+                            preventClicksPropagation: false,
+                            slideToClickedSlide: true,
+                            centeredSlides: true,
+                            slidesPerView: 'auto',
+                            shortSwipes: false,
+                            longSwipes: true,
+                            longSwipesRatio: 1,
+                            roundLengths: true,
+                            speed: 600,
+                            allowTouchMove: false,
+                            breakpoints: {
+                                768: {
+                                    spaceBetween: 20
+                                }
+                            }
+                        });
+                        caseStudiesSlider.controller.control = caseStudiesSliderThumbs;
+                        caseStudiesSliderThumbs.controller.control = caseStudiesSlider;
+                    },
+                    init: function () {
+                        this.onResize();
+                        this.checkWidth();
                     }
-                });
-                caseStudiesSlider.controller.control = caseStudiesSliderThumbs;
-                caseStudiesSliderThumbs.controller.control = caseStudiesSlider;
+                };
+
+                responsiveCaseStudy.init();
             });
         </script>
     </div>
@@ -229,49 +284,80 @@
         <div class="problems-list">
             <div class="problem">
                 <div class="image-container">
-                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/cant-find-products.svg'); ?>" class="image" alt="Customers can't find the products they want" />
+                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/where-to-start.svg'); ?>" class="image" alt="Knowing where to start" />
                 </div>
                 <div class="text-container">
-                    <div class="title">Customers can't find the product they want</div>
-                    <div class="subtitle">Bad design and a poor layout means customers who are ready to buy simply can’t find what they are looking for</div>
-                    <div class="description">When a customer can’t find what they want, they go elsewhere. From part finders, technical specifications and product configurations, to FAQs, stock availability and post-sale support, a good design and well thought out experience can be the difference in meeting a customer's need</div>
+                    <div class="title">Knowing where to start</div>
+                    <div class="description">
+                        <p>Many professionals have envisioned exactly what they want when it comes to a new website, but knowing where to start, what’s required for a complete plan or communicating exactly what is wanted often presents itself as an early challenge.</p>
+                        <p>Without being an expert in e-commerce, documenting and gathering requirements, knowing what figures to look at, facilitating and leading meetings and actively partaking in ideation to translate and record into technical requirements is tough -  as is knowing costs, timescales and return on investments - that’s where we come in!</p>
+                        <p>We use a specialist, experienced approach to give guidance and direction when starting a project.</p>
+                    </div>
                 </div>
             </div>
             <div class="problem">
                 <div class="image-container">
-                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/cant-order-online.svg'); ?>" class="image" alt="Customers can't order online" />
+                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/building-plan.svg'); ?>" class="image" alt="Building a business-case plan" />
                 </div>
                 <div class="text-container">
-                    <div class="title">Customers can't order online</div>
-                    <div class="subtitle">It’s not just about selling online, it’s also about commercial growth</div>
-                    <div class="description">Yes, customers want to place and pay for orders online. But what does that really mean? It means you can stay ahead of the competition, build international relationships, trade 24/7, cross sell and upsell your products, and so much more. A shopping cart on your website could be a key to commercial growth</div>
+                    <div class="title">Building a business-case plan</div>
+                    <div class="description">
+                        <p>Organisations know what they want, but how exactly do they get it?</p>
+                        <p>Clients often need support in building a business case that demonstrates and justifies what actually needs to be done to achieve success: A thorough analysis of the overall business, needs and figures help to build a plan that demonstrates the direction of travel and the technology required to get there (this is often referred to as the internal resource for justification).</p>
+                    </div>
                 </div>
             </div>
             <div class="problem">
                 <div class="image-container">
-                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/not-flexible-adaptable.svg'); ?>" class="image" alt="The website isn't flexible or adaptable" />
+                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/online-offline.svg'); ?>" class="image" alt="Defining how offline and online work together" />
                 </div>
                 <div class="text-container">
-                    <div class="title">The website isn’t flexible or adaptable</div>
-                    <div class="subtitle">The website is mis-behaving. There’s no such thing as a bad website, only bad developers</div>
-                    <div class="description">Your website needs to meet your business needs now. Business and technology move fast, so it’s important that a website, and it’s developers, are responsive to meeting new opportunities. Security and stability are also vital for preparing for future change, and addressing long-term plans</div>
+                    <div class="title">Defining how offline and online work together</div>
+                    <div class="description">
+                        <p>Websites can serve online and beyond, with no disruption to the status quo.</p>
+                        <p>With zero interruptions, online functions can successfully support offline teams and users, for example, a website can digitally replicate in person services (such as customer support) whilst improving the efficiency of processes (for example, the processing of the product) by being in sync with back end systems to streamline the functionality of departments: a benefit being the removal of unnecessary administrative hours and resources, boosting staff morale and productivity. </p>
+                    </div>
                 </div>
             </div>
             <div class="problem">
                 <div class="image-container">
-                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/not-reaching-potential.svg'); ?>" class="image" alt="The website isn't reaching its full potential" />
+                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/data-analysis.svg'); ?>" class="image" alt="Using analytics and interpreting reports to generate strategy" />
                 </div>
                 <div class="text-container">
-                    <div class="title">The website isn’t reaching its full potential</div>
-                    <div class="subtitle">A website should be more than a shop front, it can be a powerful tool when developed right</div>
-                    <div class="description">With a website should come solutions to meet known opportunities. Develop it as an internal tool for staff to use, to minimise high operational costs, or a way to sustain customer relationships. The aim should be for you to ask ‘wouldn’t it be awesome if our website could do...’ and for it to be able to happen</div>
+                    <div class="title">Using analytics and interpreting reports to generate strategy</div>
+                    <div class="description">
+                        <p>Used intelligently, a website can generate strategic ideas and direct commercial focus.</p>
+                        <p>Think of it as a reporting tool that surfaces opportunities (or warnings) to direct commercial focus and strategy by gaining regular-live awareness into customer behaviour, data and natural phenomenons that give insight to improve areas such as the customer experience and SEO.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="problem">
+                <div class="image-container">
+                    <img src="<?php echo $block->getViewFileUrl('images/services/illustrations/build-trust.svg'); ?>" class="image" alt="Building trust and commitment" />
+                </div>
+                <div class="text-container">
+                    <div class="title">Building trust and commitment</div>
+                    <div class="description">
+                        <p>More so now than ever, we understand the need to demonstrate trust between client and supplier.</p>
+                        <p>With the recent surge in b2b e-commerce, websites have been built despite a lack of vital context - but how can a supplier be trusted to build a website that will most meaningfully move the business forward? By seeking to get an extensive understanding of the business by looking at:</p>
+                        <ul>
+                            <li>Customer segments</li>
+                            <li>Employees</li>
+                            <li>Business model</li>
+                            <li>Product types</li>
+                            <li>Bespoke software</li>
+                            <li>Objectives</li>
+                            <li>Company data and competitors</li>
+                        </ul>
+                        <p>Without this, a supplier cannot be trusted to build the best possible website for the client.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="fullwidth" id="approach">
-    <div class="page-main section">
+    <div class="section">
         <div class="section-intro-container">
             <h2 class="section-title center">
                 <span>How it's done</span>
@@ -281,82 +367,229 @@
                 <div class="circles"></div>
                 <div class="line"></div>
             </div>
-            <div class="description">We plan, launch, and help run websites with six key foundations:</div>
+            <div class="description">We plan, launch, and help run websites with the following key foundations:</div>
         </div>
-        <div class="approach-steps">
-            <div class="step">
-                <div class="inner-wrapper">
-                    <div class="number">
-                        <span>1</span>
+        <div class="how-its-done-steps-wrapper our-approach-slider swiper-container">
+            <div class="how-its-done-steps swiper-wrapper">
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/approach.svg'); ?>" alt="Initial consultation icon" />
+                        </div>
+                        <div class="content">
+                            <div class="subtitle">Overview</div>
+                            <div class="title">Our approach</div>
+                            <div class="description">
+                                <p>To build the best fit website for our clients, we specialise in taking the time to get the deepest possible understanding of the business and the industry it operates in. With a decade of experience, passion for solving problems and expertise of asking all the right questions, we develop hassle-free project plans that enable a website to be built to exact specifications and expectations.</p>
+                                <p>We value a consultative approach to creating a proposal, adding depth and detail at each stage of planning, while evaluating together to ensure the plan consistently represents the best overall fit for the business: and we never progress without echoing back our understanding, ensuring clients are confident we understand the most complex of requests and they know how what they want is achieved.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="action primary next-slide dark-l">
+                            <span>First Step</span>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <img src="<?php echo $block->getViewFileUrl('images/icons/approach/light-bulb.svg'); ?>" alt="Light bulb icon" />
-                    </div>
-                    <div class="title">Support the customer journey</div>
-                    <div class="description">A website built from a solid project plan that supports marketing, sales and commercial objectives</div>
                 </div>
-            </div>
-            <div class="step">
-                <div class="inner-wrapper">
-                    <div class="number">
-                        <span>2</span>
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/consultation.svg'); ?>" alt="Initial consultation icon" />
+                        </div>
+                        <div class="content">
+                            <div class="subtitle">Step 1</div>
+                            <div class="title">Initial consultation</div>
+                            <div class="description">
+                                <p>An initial open-talk to delve into the business to identify the challenges of the current website, future aspirations, product types and target markets, as well as project expectations and limitations, (for example, how can our team best support client job roles and departments) and lastly: timelines and figures to be met/improved.</p>
+                                <p>We use this opportunity to also learn about bespoke or uncommon features the website currently uses or would benefit from. This stage is the starting foundation as to what a solution to the challenges could include.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="action primary next-slide dark-l">
+                            <span>Next Step</span>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <img src="<?php echo $block->getViewFileUrl('images/icons/approach/responsive.svg'); ?>" alt="Responsive icon" />
-                    </div>
-                    <div class="title">Work across mobile/tablet/desktop</div>
-                    <div class="description">A website that has been optimised and tested for any device, anywhere, anytime, and by anybody</div>
                 </div>
-            </div>
-            <div class="step">
-                <div class="inner-wrapper">
-                    <div class="number">
-                        <span>3</span>
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/puzzle.svg'); ?>" alt="Knowing what to do icon" />
+                        </div>
+                        <div class="content">
+                            <div class="subtitle">Step 2</div>
+                            <div class="title">Knowing what to do</div>
+                            <div class="description">
+                                <p>The biggest question we hear when developing websites is ‘but how exactly do we get that?’ Let us answer it now.</p>
+                                <p>Knowing the business and the specific requirements, we isolate the metrics (associated with the particular objective) that need to be influenced to meet success and carefully match them with technology, techniques or bespoke software to create the desirable outcome, presenting a solution evidenced with data. In other terms, we look at exactly what is wanted and what needs to be done to get there.</p>
+                            </div>
+                            <a href="#" class="action primary modal-open" data-type="knowing-what-to-do">
+                                <span>See Example</span>
+                            </a>
+                        </div>
+                        <a href="#" class="action primary next-slide dark-l">
+                            <span>Next Step</span>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <img src="<?php echo $block->getViewFileUrl('images/icons/approach/website.svg'); ?>" alt="Website icon" />
-                    </div>
-                    <div class="title">Intuitive and easy to navigate</div>
-                    <div class="description">A website that allows prospects and customers to research, analyse, order and reorder with ease - the first time, and every time</div>
                 </div>
-            </div>
-            <div class="step">
-                <div class="inner-wrapper">
-                    <div class="number">
-                        <span>4</span>
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/summary.svg'); ?>" alt="Executive summary icon" />
+                        </div>
+                        <dic class="content">
+                            <div class="subtitle">Step 3</div>
+                            <div class="title">Executive summary</div>
+                            <div class="description">
+                                <p>Following the call, we take what we initially discussed and present/echo back an executive summary of the business change required, indicative costs and timescales and how the return on investment will be realised (substantially helping clients who request support for internally justifying costs).</p>
+                            </div>
+                        </dic>
+                        <a href="#" class="action primary next-slide dark-l">
+                            <span>Next Step</span>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <img src="<?php echo $block->getViewFileUrl('images/icons/approach/back-office-integration.svg'); ?>" alt="Back office integration icon" />
-                    </div>
-                    <div class="title">Integrate with existing systems</div>
-                    <div class="description">A website that is seamlessly in sync with your catalogue, back-office accounting/ERP/WMS, and third party systems</div>
                 </div>
-            </div>
-            <div class="step">
-                <div class="inner-wrapper">
-                    <div class="number">
-                        <span>5</span>
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/detailed-plan.svg'); ?>" alt="Final proposal icon" />
+                        </div>
+                        <div class="content">
+                            <div class="subtitle">Step 4</div>
+                            <div class="title">Final proposal</div>
+                            <div class="description">
+                                <p>The final proposal consists of a full work breakdown schedule, detailing all costs, timescales and requirements, and having adopted a consultative process, we ensure  what is being presented internally/to stakeholders represents the best overall fit (ensuring you look good to colleagues and superiors!).</p>
+                            </div>
+                        </div>
+                        <a href="#" class="action primary next-slide dark-l">
+                            <span>Next Step</span>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <img src="<?php echo $block->getViewFileUrl('images/icons/approach/www.svg'); ?>" alt="WWW icon" />
-                    </div>
-                    <div class="title">Search engine optimised</div>
-                    <div class="description">A website with customer-centric content, set up for search engines, and high-quality competitor-beating traffic</div>
                 </div>
-            </div>
-            <div class="step">
-                <div class="inner-wrapper">
-                    <div class="number">
-                        <span>6</span>
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/web-development.svg'); ?>" alt="Web development icon" />
+                        </div>
+                        <div class="content">
+                            <div class="subtitle">Step 5</div>
+                            <div class="title">Execution</div>
+                            <div class="description">
+                                <p>It’s time to build a website and deliver a project exactly to specification - to standard, websites support the customer journey, work across mobile/tablet/desktop, are intuitive and easy to navigate, integrate with existing systems, are search engine optimised (reducing external fees) and finally, are secure and stable.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="action primary next-slide dark-l">
+                            <span>Next Step</span>
+                        </a>
                     </div>
-                    <div class="icon">
-                        <img src="<?php echo $block->getViewFileUrl('images/icons/approach/padlock.svg'); ?>" alt="Padlock icon" />
+                </div>
+                <div class="step swiper-slide">
+                    <div class="inner-wrapper">
+                        <div class="icon">
+                            <img src="<?php echo $block->getViewFileUrl('images/icons/approach/ongoing-support.svg'); ?>" alt="Ongoing support icon" />
+                        </div>
+                        <div class="content">
+                            <div class="subtitle">Step 6</div>
+                            <div class="title">Ongoing</div>
+                            <div class="description">
+                                <p>We facilitate check-in meetings and provide extensive training throughout the project, and having integrated ourselves as part of the team, we are always on hand to help and look forward to seeing clients' success.</p>
+                                <p>As a flexible team, we often build upon and make modifications to existing features, seeing them evolve with enhancements overtime. For example, the bespoke reward scheme built for our client was enhanced to enable their customers to redeem points against their extensive catalogue rather than popular main street gifts, making 2,700 of their own stock items redeemable.</p>
+                                <p>Sometimes, clients prefer to approach a project by selecting ‘mini-projects’ within a larger project, allowing them to essentially pick and choose what will be executed first and what will be developed in the future - Rome wasn’t built overnight! </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="title">Secure and stable</div>
-                    <div class="description">A website supported by knowledgeable internal staff, protected from external threats, and with a plan in place for when things go wrong</div>
                 </div>
             </div>
         </div>
+        <div class="swiper-container our-approach-thumbnails">
+            <div class="swiper-wrapper"></div>
+        </div>
+        <div class="modal-wrapper" data-type="knowing-what-to-do">
+            <div class="modal-window modal-case-study">
+                <div class="close close-icon"></div>
+                <img src="<?php echo $block->getViewFileUrl('images/case-studies/trimline/background-shapes-small.svg'); ?>" class="background-shapes" alt="Trimline background shapes" />
+                <div class="modal-window-inner">
+                    <div class="modal-case-study-content">
+                        <div class="image-container">
+                            <img src="<?php echo $block->getViewFileUrl('images/case-studies/trimline/t-points-mobile-screenshot.png'); ?>" alt="Trimline Group Ltd. mobile screenshot" class="screenshot" />
+                        </div>
+                        <div class="text-container">
+                            <h2 class="modal-title">
+                                <span>Transforming an idea into reality</span>
+                            </h2>
+                            <div class="description">
+                                <p>We worked with Trimline’s marketing team and won them the award for best e-commerce website in their industry. During this project we built a completely bespoke reward scheme that as of early 2022 has processed over £33.3m worth of trade and at present, we are working with the team to launch an exciting new subrand.</p>
+                            </div>
+                            <a href="#" class="action primary dark close">
+                                <span>Close</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            requirejs(['jquery', 'js/lib/swiper'], function($, Swiper) {
+                $('.how-its-done-steps > .step').each(function() {
+                    $(this).find('.icon').clone().addClass('swiper-slide').appendTo('.our-approach-thumbnails > .swiper-wrapper');
+                });
+
+                var ourApproachSlider = new Swiper('.our-approach-slider', {
+                    speed: 600,
+                    direction: "horizontal",
+                    spaceBetween: 10,
+                    effect: "coverflow",
+                    grabCursor: true,
+                    centeredSlides: true,
+                    roundLengths: true,
+                    slidesPerView: "auto",
+                    coverflowEffect: {
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 300,
+                        modifier: 1,
+                        slideShadows: true
+                    },
+                    breakpoints: {
+                        380: {
+                            spaceBetween: 20
+                        },
+                        768: {
+                            spaceBetween: 40,
+                        },
+                        1240: {
+                            spaceBetween: 50
+                        },
+                        1600: {
+                            spaceBetween: 60
+                        }
+                    }
+                });
+
+                var ourApproachSliderThumbs = new Swiper('.our-approach-thumbnails', {
+                    spaceBetween: 10,
+                    preventClicks: false,
+                    preventClicksPropagation: false,
+                    slideToClickedSlide: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    shortSwipes: false,
+                    longSwipes: true,
+                    longSwipesRatio: 1,
+                    roundLengths: true,
+                    speed: 600,
+                    allowTouchMove: false,
+                    breakpoints: {
+                        768: {
+                            spaceBetween: 14
+                        }
+                    }
+                });
+                ourApproachSlider.controller.control = ourApproachSliderThumbs;
+                ourApproachSliderThumbs.controller.control = ourApproachSlider;
+
+                $('.action.next-slide').click(function(e) {
+                    e.preventDefault();
+                    ourApproachSlider.slideNext();
+                });
+            });
+        </script>
     </div>
 </div>
 <div class="fullwidth" id="results">
@@ -364,63 +597,71 @@
         <div class="page-main">
             <div class="section-intro-container">
                 <h2 class="section-title center">
-                    <span>Results</span>
+                    <span>Key benefits</span>
                 </h2>
                 <div class="title-divider center white">
                     <div class="line"></div>
                     <div class="circles"></div>
                     <div class="line"></div>
                 </div>
-                <div class="description" style="color: #fff">A commercial website that helps a company capture leads, increase their customer base, and significantly grow their business</div>
+                <div class="description" style="color: #fff">As well as a free-to-take, personalised project plan, when working with us you also receive the following:</div>
             </div>
         </div>
         <div class="results-list">
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/stopwatch.svg'); ?>" alt="Stopwatch icon" class="icon" />
-                    <div class="title">Significant reductions in time taken for internal tasks</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/calculator.svg'); ?>" alt="Free data resources" class="icon" />
+                    <div class="title">Free data resources</div>
+                    <div class="description">copies of the ‘number crunching’ that provided the solution as to what to do</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/thumbs-up.svg'); ?>" alt="Thumbs up icon" class="icon" />
-                    <div class="title">Improved customer service scores by reducing time taken</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/support-role.svg'); ?>" alt="Support with role " class="icon" />
+                    <div class="title">Support with role</div>
+                    <div class="description">we are committed to ensuring professionals succeed at the task at hand, making even those with little experience look and feel confident in the e-commerce world</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/mobile.svg'); ?>" alt="Mobile phone icon" class="icon" />
-                    <div class="title">Increases in overall website use over phone or email</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/stopwatch.svg'); ?>" alt="Quick turnaround" class="icon" />
+                    <div class="title">Quick turnaround</div>
+                    <div class="description">speedy response on timescales and costs associated</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/hand-support-chart.svg'); ?>" alt="Support chart icon" class="icon" />
-                    <div class="title">Eliminated credit control issues and revenue write-offs</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/thumbs-up.svg'); ?>" alt="Meeting management" class="icon" />
+                    <div class="title">Meeting management</div>
+                    <div class="description">with great feedback on how we manage meetings, rest assured we’ll do the heavy work of facilitating and leading contact</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/customer-tick.svg'); ?>" alt="Customer tick icon" class="icon" />
-                    <div class="title">Customers returning from competitors</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/hand-support-chart.svg'); ?>" alt="Extensive SEO insurance" class="icon" />
+                    <div class="title">Extensive SEO insurance</div>
+                    <div class="description">zero disruption to traffic or prior SEO efforts</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/increase.svg'); ?>" alt="Growth chart icon" class="icon" />
-                    <div class="title">Growth in new customers, orders, and re-order rates</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/price-tag.svg'); ?>" alt="Guarantee" class="icon" />
+                    <div class="title">Guarantee</div>
+                    <div class="description">our costs will be covered by a profit uplift, or we will refund any difference in cash</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/price-tag.svg'); ?>" alt="Price tag icon" class="icon" />
-                    <div class="title">Growth in sales of normally dormant/quiet product lines</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/training.svg'); ?>" alt="Training included" class="icon" />
+                    <div class="title">Training included</div>
+                    <div class="description">all projects come with 1:1 training sessions, handbooks, check in meetings and ongoing support</div>
                 </div>
             </div>
             <div class="result">
                 <div class="inner-wrapper">
-                    <img src="<?php echo $block->getViewFileUrl('images/icons/results/extra-customers.svg'); ?>" alt="New customers icon" class="icon" />
-                    <div class="title">New customers from new target markets</div>
+                    <img src="<?php echo $block->getViewFileUrl('images/icons/benefits/team-extension.svg'); ?>" alt="Trusted team" class="icon" />
+                    <div class="title">Trusted team</div>
+                    <div class="description">we are a friendly, flexible bunch who become an extension of your team</div>
                 </div>
             </div>
         </div>
@@ -437,7 +678,7 @@
                 <div class="circles"></div>
                 <div class="line"></div>
             </div>
-            <div class="description">Our vision is to see websites and web software <b>work the best they can</b> for their users: helping them <b>achieve their own goals and tasks.</b></div>
+            <div class="description">Our drive is rooted in the belief that professionals from all backgrounds with different levels of experience can still be involved in building successful e-commerce projects: we’ll do the heavy lifting, as it’s our problem to be the IT experts, not yours.</div>
         </div>
         <div class="team-members">
             <div class="member">
@@ -500,21 +741,66 @@
                     </div>
                 </div>
             </div>
-            <div class="member">
-                <div class="inner-wrapper">
-                    <div class="image-container">
-                        <img src="<?php echo $block->getViewFileUrl('images/team/avatar/lucian.svg'); ?>" class="image" alt="Chloe" />
-                    </div>
-                    <div class="content">
-                        <div class="name">Lucian</div>
-                        <div class="job-role">Junior Developer</div>
-                        <div class="description">Lorem ipsum dolor sit amet, ad mea graeco intellegam, his in propriae persecuti intellegam.</div>
-                        <a href="https://www.linkedin.com/in/lucianchevallier/" class="linkedin-link action primary">
-                            <span>View Linked-In</span>
-                        </a>
-                    </div>
+        </div>
+    </div>
+    <div class="team-aims-wrapper section">
+        <div class="page-main">
+            <div class="small-title">
+                <span>A small yet mighty team, everyday we aim to get:</span>
+            </div>
+        </div>
+        <div class="swiper-container team-aims-slider">
+            <div class="swiper-wrapper team-aims">
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">The deepest understanding of the needs of customers</div>
+                </div>
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">Comprehensive knowledge of the software and services that are best for each customer</div>
+                </div>
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">A focus on re-usable software products that give us the ability to effectively create something new from something existing</div>
+                </div>
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">High utilisation, at the same time as being ready to spring into action when needed</div>
+                </div>
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">A culture of personal, friendly, knowledgeable service, unlike what some IT organisations offer</div>
+                </div>
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">A central and all-encompassing emphasis on ensuring consistent high-quality customer experiences</div>
+                </div>
+                <div class="aim swiper-slide">
+                    <div class="inner-wrapper">A supportive team of future-facing, service-focused individuals; committed to personal, and stakeholder growth</div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        requirejs(['jquery', 'js/lib/swiper'], function($, Swiper) {
+            var teamAimsSlider = new Swiper('.team-aims-slider', {
+                speed: 600,
+                spaceBetween: 1,
+                roundLengths: true,
+                slidesPerView: 2,
+                loop: true,
+                autoplay: {
+                    delay: 500000
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        autoplay: {
+                            delay: 5000
+                        }
+                    },
+                    1240: {
+                        slidesPerView: 5
+                    },
+                    1600: {
+                        slidesPerView: 7
+                    }
+                }
+            });
+        });
+    </script>
 </div>

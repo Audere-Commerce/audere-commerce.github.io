@@ -1,0 +1,61 @@
+<?php /* @var $block AudereCommerce\KnowledgeBase\Block\Post\View */ ?>
+<?php /* @var $helper AudereCommerce\KnowledgeBase\Helper\KnowledgeBase */ ?>
+<?php $helper = $this->helper('AudereCommerce\KnowledgeBase\Helper\KnowledgeBase'); ?>
+<?php $post = $block->getPost(); ?>
+<?php /* @var $post AudereCommerce\KnowledgeBase\Api\Data\PostInterface */ ?>
+<?php if ($layoutTextOne = $post->getLayoutOneTextOne()): ?>
+    <div class="page-main section">
+        <?php if ($titleOne = $post->getLayoutOneTitleOne()): ?>
+            <h3 class="subtitle"><?php echo $titleOne; ?></h3>
+        <?php endif; ?>
+        <?php echo $helper->outputHtml($layoutTextOne); ?>
+    </div>
+<?php endif; ?>
+<?php if ($post->getLayoutOneMosaicImageOne() && $post->getLayoutOneMosaicImageTwo()): ?>
+    <div class="page-main section">
+        <div class="mosaic-images">
+            <div class="large-image wow fadeInLeft">
+                <img src="<?php echo $helper->getPostImage('layout_one_mosaic_image_one', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+            </div>
+            <div class="large-image wow fadeInRight">
+                <img src="<?php echo $helper->getPostImage('layout_one_mosaic_image_two', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if ($layoutTextTwo = $post->getLayoutOneTextTwo()): ?>
+    <div class="page-main section">
+        <?php if ($titleTwo = $post->getLayoutOneTitleTwo()): ?>
+            <h3 class="subtitle"><?php echo $titleTwo; ?></h3>
+        <?php endif; ?>
+        <?php echo $helper->outputHtml($layoutTextTwo); ?>
+    </div>
+<?php endif; ?>
+<?php if ($post->getLayoutOneFullWidthImage()): ?>
+    <div class="fullwidth-image section">
+        <img src="<?php echo $helper->getPostImage('layout_one_fullwidth_image', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+    </div>
+<?php endif; ?>
+<?php if ($layoutTextThree = $post->getLayoutOneTextThree()): ?>
+    <div class="page-main section">
+        <?php if ($titleThree = $post->getLayoutOneTitleThree()): ?>
+            <h3 class="subtitle"><?php echo $titleThree; ?></h3>
+        <?php endif; ?>
+        <?php echo $helper->outputHtml($layoutTextThree); ?>
+    </div>
+<?php endif; ?>
+<?php if ($post->getLayoutOneMosaicImageThree() && $post->getLayoutOneMosaicImageFour()): ?>
+    <div class="page-main section">
+        <div class="mosaic-images">
+            <div class="large-image wow fadeInLeft">
+                <img src="<?php echo $helper->getPostImage('layout_one_mosaic_image_three', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+            </div>
+            <div class="large-image wow fadeInRight">
+                <img src="<?php echo $helper->getPostImage('layout_one_mosaic_image_four', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+<script>
+    new WOW().init();
+</script>

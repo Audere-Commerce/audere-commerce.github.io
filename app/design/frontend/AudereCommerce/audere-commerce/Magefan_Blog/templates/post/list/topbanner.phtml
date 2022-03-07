@@ -1,0 +1,33 @@
+<?php /* @var $block Magento\Framework\View\Element\Template */ ?>
+<?php /* @var $blogHelper AudereCommerce\AudereCommerce\Helper\Blog */ ?>
+<?php $blogHelper = $this->helper('AudereCommerce\AudereCommerce\Helper\Blog'); ?>
+<?php $blogCategories = $blogHelper->getBlogCategories(); ?>
+<div class="fullwidth-top-banner" style="background-image: url(<?php echo $blogHelper->getBlogTopBannerImage(); ?>)">
+    <div class="content">
+        <div class="text-container">
+            <?php echo $block->getChildHtml('breadcrumbs'); ?>
+            <?php echo $block->getChildHtml('page.main.title'); ?>
+            <div class="title-divider white center">
+                <div class="line"></div>
+                <div class="circles"></div>
+                <div class="line"></div>
+            </div>
+            <div class="description"><?php echo $blogHelper->getBlogTopBannerText(); ?></div>
+            <?php if (count($blogCategories)): ?>
+                <ul class="blog-categories">
+                    <?php foreach($blogCategories as $category): ?>
+                        <li class="category">
+                            <a href="<?php echo $blogHelper->getBlogCategoryUrl($category); ?>" title="<?php echo $category['title']; ?>"><?php echo $category['title']; ?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+<script>
+    requirejs(['jquery'], function($) {
+        var currentUrl = window.location.href;
+        $('a[href="' + currentUrl + '"]').addClass('active');
+    });
+</script>

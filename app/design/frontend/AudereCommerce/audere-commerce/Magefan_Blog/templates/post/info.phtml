@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post info template
+ *
+ * @var $block \Magefan\Blog\Block\Post\Info
+ */
+?>
+<?php $blogHelper = $this->helper('AudereCommerce\AudereCommerce\Helper\Blog'); ?>
+<?php /* @var $blogHelper AudereCommerce\AudereCommerce\Helper\Blog */ ?>
+<?php $_post = $blogHelper->getPost() ?>
+<div class="blog-post-info">
+    <div class="left blog-info">
+        <?php if ($postCategory = $blogHelper->getPostCategory($_post->getId())): ?>
+            <div class="text-info">
+                <div class="label"><?php echo __('Category:'); ?></div>
+                <a href="<?php echo $blogHelper->getBlogCategoryUrl($postCategory); ?>" class="post-category value">
+                    <span><?php echo $postCategory->getData('title'); ?></span>
+                </a>
+            </div>
+        <?php endif; ?>
+        <?php if ($_post->isPublishDateEnabled()): ?>
+            <div class="blog-calendar-circle info-circle">
+                <div class="circle-inner">
+                    <div class="top-bar">
+                        <span class="month"><?php echo $_post->getPublishDate('M') ?></span>
+                    </div>
+                    <div class="day"><?php echo $_post->getPublishDate('d') ?></div>
+                    <div class="year"><?php echo $_post->getPublishDate('Y') ?></div>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+    <div class="right blog-author">
+        <div class="avatar info-circle">
+            <img src="<?php echo $block->getViewFileUrl('images/team/avatar/chloe.svg'); ?>" alt="Chloe | Marketing Strategist" />
+        </div>
+        <div class="text-info">
+            <div class="label">By <b>Chloe Joomun</b></div>
+            <div class="value job-role"><?php echo __('Marketing Strategist'); ?></div>
+        </div>
+    </div>
+</div>

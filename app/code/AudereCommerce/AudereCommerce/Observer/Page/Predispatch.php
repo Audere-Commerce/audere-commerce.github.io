@@ -66,7 +66,11 @@ class Predispatch implements ObserverInterface
         $pathsAllowed = array(
             'cms_index_index',
             'contact_index_index',
-            'cms_page_view'
+            'cms_page_view',
+            'blog_page',
+            'blog_index_index',
+            'blog_post_view',
+            'blog_category_view'
         );
 
         if (!in_array($currentPath, $pathsAllowed)) {

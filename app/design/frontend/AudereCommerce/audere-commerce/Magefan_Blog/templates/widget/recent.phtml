@@ -1,0 +1,131 @@
+<?php
+/**
+ * Copyright © 2016 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog recent posts widget
+ *
+ * @var $block \Magefan\Blog\Block\Widget\Recent
+ */
+?>
+
+<?php
+    $_postCollection = $block->getPostCollection();
+    $i = 1;
+    $blogHelper = $this->helper('AudereCommerce\AudereCommerce\Helper\Blog');
+    /* @var $blogHelper AudereCommerce\AudereCommerce\Helper\Blog */
+?>
+<?php if ($_postCollection->count()): ?>
+    <div class="fullwidth-blue">
+        <div class="page-main section">
+            <h2 class="section-title center">
+                <span><?php echo __('Latest News'); ?></span>
+            </h2>
+            <div class="title-divider center">
+                <div class="line"></div>
+                <div class="circles"></div>
+                <div class="line"></div>
+            </div>
+            <div class="post-slider-outer-wrapper">
+                <div class="swiper-container recent-posts-slider recent-posts post-list-wrapper">
+                    <ul class="post-list clearfix swiper-wrapper">
+                        <?php foreach ($_postCollection as $_post): ?>
+                            <?php
+                            $_postUrl = $_post->getPostUrl();
+                            $_postName = $block->escapeHtml($_post->getTitle(), null, true);
+                            $limit = 220;
+                            $shortDescription = strip_tags($block->getShorContent($_post));
+                            if ($i <= 1) {
+                                $characters = 250;
+                            } else {
+                                $characters = 100;
+                            }
+                            ?>
+                            <li class="post-holder post-holder-<?php echo $_post->getId() ?> swiper-slide">
+                                <?php if ($featuredImage = $_post->getFeaturedImage()): ?>
+                                    <a href="<?php echo $_postUrl ?>" title="<?php echo $_postName ?>" class="image" style="background-image: url(<?php echo $featuredImage ?>);"></a>
+                                <?php endif; ?>
+                                <div class="content">
+                                    <div class="top">
+                                        <?php if ($postCategory = $blogHelper->getPostCategory($_post->getId())): ?>
+                                            <a href="<?php echo $blogHelper->getBlogCategoryUrl($postCategory); ?>" class="post-category">
+                                                <span><?php echo $postCategory->getData('title'); ?></span>
+                                            </a>
+                                        <?php endif; ?>
+                                        <div class="blog-calendar-circle info-circle">
+                                            <div class="circle-inner">
+                                                <div class="top-bar">
+                                                    <span class="month"><?php echo $_post->getPublishDate('M') ?></span>
+                                                </div>
+                                                <div class="day"><?php echo $_post->getPublishDate('d') ?></div>
+                                                <div class="year"><?php echo $_post->getPublishDate('Y') ?></div>
+                                            </div>
+                                        </div>
+                                        <h2 class="post-title">
+                                            <a class="post-item-link"
+                                               href="<?php echo $_postUrl ?>">
+                                                <?php echo $_postName; ?>
+                                            </a>
+                                        </h2>
+                                        <div class="post-description clearfix">
+                                            <div class="post-text-hld clearfix">
+                                                <?php if (strlen($shortDescription) > $limit): ?>
+                                                    <?php echo substr($shortDescription, 0, strrpos(substr($shortDescription, 0, $limit), ' ')) . '...'; ?>
+                                                <?php else: ?>
+                                                    <?php echo $shortDescription; ?>
+                                                <?php endif; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <a class="action primary" href="<?php echo $_postUrl ?>" title="<?php echo $_postName ?>">
+                                            <?php echo __('Find Out More') ?>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="slider-controls">
+                    <div class="recent-posts-left swiper-control"></div>
+                    <div class="recent-posts-right swiper-control"></div>
+                </div>
+            </div>
+            <script>
+                requirejs(['jquery', 'js/lib/swiper'], function($, Swiper) {
+                    var recentPosts = new Swiper('.recent-posts-slider', {
+                        prevButton: '.recent-posts-left',
+                        nextButton: '.recent-posts-right',
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        roundLengths: true,
+                        preventClicksPropagation: false,
+                        preventClicks: false,
+                        breakpoints: {
+                            480: {
+                                slidesPerView: 2
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
+                        navigation: {
+                            prevEl: '.recent-posts-left',
+                            nextEl: '.recent-posts-right'
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+<?php endif; ?>

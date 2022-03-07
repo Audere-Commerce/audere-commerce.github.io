@@ -17,5 +17,8 @@
                 <block class="Magento\Framework\View\Element\Template" name="contact.details" template="Magento_Contact::details.phtml" />
             </container>
         </referenceContainer>
+        <referenceContainer name="bottom.page">
+            <block class="Magefan\Blog\Block\Widget\Recent" name="latest.news" />
+        </referenceContainer>
     </body>
 </page>

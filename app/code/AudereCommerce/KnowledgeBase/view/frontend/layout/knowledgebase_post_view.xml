@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="top.content" />
+        <referenceContainer name="page.wrapper">
+            <block class="AudereCommerce\KnowledgeBase\Block\Post\View" name="content.top" template="AudereCommerce_KnowledgeBase::view/topcontent.phtml" before="post.content" />
+            <block class="AudereCommerce\KnowledgeBase\Block\Post\View" name="post.content" template="AudereCommerce_KnowledgeBase::view/content.phtml" before="main.content">
+                <block class="AudereCommerce\KnowledgeBase\Block\Post\View" name="layout.one" template="AudereCommerce_KnowledgeBase::view/layouts/one.phtml" />
+                <block class="AudereCommerce\KnowledgeBase\Block\Post\View" name="layout.two" template="AudereCommerce_KnowledgeBase::view/layouts/two.phtml" />
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="AudereCommerce\KnowledgeBase\Block\Post\View" name="post.products" template="AudereCommerce_KnowledgeBase::view/products.phtml" />
+        </referenceContainer>
+    </body>
+</page>

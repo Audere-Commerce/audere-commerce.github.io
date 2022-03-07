@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="blog.sidebar.search" remove="true" />
+        <referenceContainer name="sidebar.additional">
+            <block class="AudereCommerce\AudereCommerce\Block\Twitter\Feed" name="twitter.feed" template="Magefan_Blog::sidebar/tweets.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>

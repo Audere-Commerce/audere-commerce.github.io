@@ -1,0 +1,14 @@
+<?php
+
+namespace AudereCommerce\KnowledgeBase\Model\ResourceModel;
+
+use \Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+class Category extends AbstractDb
+{
+
+    public function _construct()
+    {
+        $this->_init('auderecommerce_knowledgebase_category', 'id');
+    }
+}

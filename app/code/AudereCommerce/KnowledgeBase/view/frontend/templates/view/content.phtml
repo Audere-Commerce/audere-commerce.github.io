@@ -1,0 +1,12 @@
+<?php /* @var $block AudereCommerce\KnowledgeBase\Block\Post\View */ ?>
+<?php /* @var $helper AudereCommerce\KnowledgeBase\Helper\KnowledgeBase */ ?>
+<?php $helper = $this->helper('AudereCommerce\KnowledgeBase\Helper\KnowledgeBase'); ?>
+<?php $post = $block->getPost(); ?>
+<?php /* @var $post AudereCommerce\KnowledgeBase\Api\Data\PostInterface */ ?>
+<div class="content-wrapper">
+    <?php if ($post->getLayoutOneEnabled()): ?>
+        <?php echo $block->getChildHtml('layout.one'); ?>
+    <?php elseif ($post->getLayoutTwoEnabled()): ?>
+        <?php echo $block->getChildHtml('layout.two'); ?>
+    <?php endif; ?>
+</div>

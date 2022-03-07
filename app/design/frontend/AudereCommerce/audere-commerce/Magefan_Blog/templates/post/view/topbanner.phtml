@@ -1,0 +1,15 @@
+<?php /* @var $block Magento\Framework\View\Element\Template */ ?>
+<?php $blogHelper = $this->helper('AudereCommerce\AudereCommerce\Helper\Blog'); ?>
+<?php /* @var $blogHelper AudereCommerce\AudereCommerce\Helper\Blog */ ?>
+<?php $_post = $blogHelper->getPost() ?>
+<?php $featuredImage = $_post->getFeaturedImage(); ?>
+<div class="fullwidth-top-banner" style="background-image: url(<?php echo $featuredImage; ?>)">
+    <div class="content">
+        <div class="text-container">
+            <?php echo $block->getChildHtml('breadcrumbs'); ?>
+            <?php echo $block->getChildHtml('page.main.title'); ?>
+            <?php echo $block->getChildHtml('top.blog.post.info'); ?>
+        </div>
+    </div>
+</div>
+<div class="blue-bar-gradient"></div>

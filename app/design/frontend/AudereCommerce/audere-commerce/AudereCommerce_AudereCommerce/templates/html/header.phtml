@@ -1,16 +1,20 @@
 <?php /* @var $block Magento\Framework\View\Element\Template */ ?>
+<?php $blogHelper = $this->helper('AudereCommerce\AudereCommerce\Helper\Blog'); ?>
+<?php /* @var $blogHelper AudereCommerce\AudereCommerce\Helper\Blog */ ?>
+<?php $blogCategories = $blogHelper->getBlogCategories(); ?>
 <header class="page-header">
     <div class="page-main">
         <a href="<?php echo $block->getUrl(''); ?>" class="logo anchor-link">
             <img src="<?php echo $block->getViewFileUrl('images/logo.svg'); ?>" alt="Audere Commerce logo" />
         </a>
         <ul class="main-navigation" id="main_navigation">
-            <li><a href="#experience" title="Experience">Experience</a></li>
-            <li><a href="#markets_served" title="Markets served">Markets served</a></li>
-            <li><a href="#services" title="Services">Services</a></li>
-            <li><a href="#approach" title="Approach">Approach</a></li>
-            <li><a href="#results" title="Results">Results</a></li>
-            <li><a href="#about" title="About">About</a></li>
+            <li class="level0"><a href="<?php echo $block->getUrl(''); ?>#experience" data-target="experience" title="Why consider us" class="anchor-link">Why consider us</a></li>
+            <li class="level0"><a href="<?php echo $block->getUrl(''); ?>#markets_served" data-target="markets_served"  title="Our work" class="anchor-link">Our work</a></li>
+            <li class="level0"><a href="<?php echo $block->getUrl(''); ?>#services" data-target="services" title="Services" class="anchor-link">Services</a></li>
+            <li class="level0"><a href="<?php echo $block->getUrl(''); ?>#approach" data-target="approach" title="Approach" class="anchor-link">Approach</a></li>
+            <li class="level0"><a href="<?php echo $block->getUrl(''); ?>#results" data-target="results" title="Key benefits" class="anchor-link">Key benefits</a></li>
+            <li class="level0"><a href="<?php echo $block->getUrl(''); ?>#about" data-target="about" title="About" class="anchor-link">About</a></li>
+            <li class="level0 has-submenu"><a href="<?php echo $blogHelper->getBlogBaseUrl(); ?>" title="Audere Blog">Blog</a></li>
             <li class="button">
                 <a href="<?php echo $block->getUrl('contact'); ?>" title="Contact" class="action primary">
                     <span>Contact</span>
@@ -25,3 +29,4 @@
         </div>
     </div>
 </header>
+<div id="mobile_sidebar"></div>

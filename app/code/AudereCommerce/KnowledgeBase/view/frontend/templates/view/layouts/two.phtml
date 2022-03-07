@@ -1,0 +1,36 @@
+<?php /* @var $block AudereCommerce\KnowledgeBase\Block\Post\View */ ?>
+<?php /* @var $helper AudereCommerce\KnowledgeBase\Helper\KnowledgeBase */ ?>
+<?php $helper = $this->helper('AudereCommerce\KnowledgeBase\Helper\KnowledgeBase'); ?>
+<?php $post = $block->getPost(); ?>
+<?php /* @var $post AudereCommerce\KnowledgeBase\Api\Data\PostInterface */ ?>
+<?php if ($layoutTextOne = $post->getLayoutTwoTextOne()): ?>
+    <div class="page-main section">
+        <?php if ($titleOne = $post->getLayoutTwoTitleOne()): ?>
+            <h3 class="subtitle"><?php echo $titleOne; ?></h3>
+        <?php endif; ?>
+        <?php echo $helper->outputHtml($layoutTextOne); ?>
+    </div>
+<?php endif; ?>
+<?php if ($post->getLayoutTwoMosaicImageOne() && $post->getLayoutTwoMosaicImageTwo()): ?>
+    <div class="page-main section">
+        <div class="mosaic-images">
+            <div class="large-image wow fadeInLeft">
+                <img src="<?php echo $helper->getPostImage('layout_two_mosaic_image_one', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+            </div>
+            <div class="large-image wow fadeInRight">
+                <img src="<?php echo $helper->getPostImage('layout_two_mosaic_image_two', $post); ?>" alt="<?php echo __('Pyro + Echo'); ?>" />
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if ($layoutTextTwo = $post->getLayoutTwoTextTwo()): ?>
+    <div class="page-main section">
+        <?php if ($titleTwo = $post->getLayoutTwoTitleTwo()): ?>
+            <h3 class="subtitle"><?php echo $titleTwo; ?></h3>
+        <?php endif; ?>
+        <?php echo $helper->outputHtml($layoutTextTwo); ?>
+    </div>
+<?php endif; ?>
+<script>
+    new WOW().init();
+</script>

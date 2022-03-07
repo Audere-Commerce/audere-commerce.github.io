@@ -1,0 +1,35 @@
+<?php /* @var $block AudereCommerce\KnowledgeBase\Block\Post\View */ ?>
+<?php /* @var $helper AudereCommerce\KnowledgeBase\Helper\KnowledgeBase */ ?>
+<?php $helper = $this->helper('AudereCommerce\KnowledgeBase\Helper\KnowledgeBase'); ?>
+<?php $post = $block->getPost(); ?>
+<?php /* @var $post AudereCommerce\KnowledgeBase\Api\Data\PostInterface */ ?>
+<?php $products = $helper->getPostProducts($post); ?>
+<?php if (count($products)): ?>
+    <h3 class="subtitle"><?php echo __('Products'); ?></h3>
+    <div class="item-listing-wrapper">
+        <ul class="product-listing grid-listing">
+            <?php foreach ($products as $_product): ?>
+                <?php
+                $image = 'category_page_list';
+                $_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+                $productImage = $_imagehelper->init($_product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(340)->getUrl();
+                ?>
+                <li class="product item">
+                    <div class="image-container">
+                        <a href="<?php echo $_product->getProductUrl(); ?>" class="image-wrapper">
+                            <img src="<?php echo $productImage; ?>" class="image" alt="<?php echo $_product->getName(); ?>" />
+                            <div class="image-overlay outline-animation">
+                                <span><?php echo __('View Product'); ?></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-info">
+                        <a href="<?php echo $_product->getProductUrl(); ?>" class="name">
+                            <span><?php echo $_product->getName(); ?></span>
+                        </a>
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>

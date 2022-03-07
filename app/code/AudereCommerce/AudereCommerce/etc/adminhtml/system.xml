@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="auderecommerce_tab" translate="label" sortOrder="10">
+            <label>Audere Commerce</label>
+        </tab>
+        <section id="social" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>auderecommerce_tab</tab>
+            <resource>AudereCommerce_RequestHandbook::config_request_handbook</resource>
+            <label>Social</label>
+            <group id="twitter_auth" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Twitter Authentication</label>
+                <field id="api_key_public" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Public Key</label>
+                </field>
+                <field id="api_key_secret" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Secret Key</label>
+                </field>
+                <field id="access_token_public" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Access Token Public</label>
+                </field>
+                <field id="access_token_secret" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Access Token Secret</label>
+                </field>
+                <field id="user_id" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>User ID</label>
+                </field>
+            </group>
+        </section>
+        <section id="mfblog">
+            <group id="index_page">
+                <field id="top_banner_text" translate="label comment" type="textarea" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Top Banner Text</label>
+                </field>
+                <field id="top_banner_image" translate="label" type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="70" showInDefault="1" showInWebsite="1" >
+                    <label>Top Banner Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\File</backend_model>
+                    <upload_dir config="system" scope_info="1">banners</upload_dir>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

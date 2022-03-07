@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="top.banner" />
+        <move element="breadcrumbs" destination="top.banner" />
+        <move element="blog.post.relatedposts" destination="bottom.page" />
+        <referenceContainer name="sidebar.main" remove="true" />
+        <referenceContainer name="top.page">
+            <block class="Magento\Framework\View\Element\Template" name="top.banner" template="Magefan_Blog::post/view/topbanner.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="top.blog.post.info" template="Magefan_Blog::post/info.phtml" />
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,15 @@
+<?php /* @var $block AudereCommerce\Trimline\Block\Blog\Author */ ?>
+<div class="blog-author">
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="<?php echo $block->getAuthorImage(); ?>" alt="<?php echo $block->getAuthorName(); ?>" />
+        </div>
+    </div>
+    <div class="details">
+        <div class="title-wrapper">
+            <span class="name"><?php echo $block->getAuthorName(); ?></span>
+            <span class="job-role"><?php echo $block->getAuthorJobRole(); ?></span>
+        </div>
+        <div class="description"><?php echo $block->getAuthorDescription(); ?></div>
+    </div>
+</div>

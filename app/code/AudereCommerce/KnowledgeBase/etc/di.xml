@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="knowledgebase_category_listing_data_source" xsi:type="string">AudereCommerce\KnowledgeBase\Model\ResourceModel\Category\Grid\Collection</item>
+                <item name="knowledgebase_post_listing_data_source" xsi:type="string">AudereCommerce\KnowledgeBase\Model\ResourceModel\Post\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="AudereCommerce\KnowledgeBase\Ui\DataProvider\Category\Form\CategoryDataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">AudereCommerce\KnowledgeBase\Ui\DataProvider\Category\Form\Modifier\Pool</argument>
+        </arguments>
+    </type>
+    <virtualType name="AudereCommerce\KnowledgeBase\Ui\DataProvider\Category\Form\Modifier\Pool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="general" xsi:type="array">
+                    <item name="class" xsi:type="string">AudereCommerce\KnowledgeBase\Ui\DataProvider\Category\Form\Modifier\General</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="AudereCommerce\KnowledgeBase\Ui\DataProvider\Post\Form\PostDataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">AudereCommerce\KnowledgeBase\Ui\DataProvider\Post\Form\Modifier\Pool</argument>
+        </arguments>
+    </type>
+    <virtualType name="AudereCommerce\KnowledgeBase\Ui\DataProvider\Post\Form\Modifier\Pool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="general" xsi:type="array">
+                    <item name="class" xsi:type="string">AudereCommerce\KnowledgeBase\Ui\DataProvider\Post\Form\Modifier\General</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="AudereCommerce\KnowledgeBase\PostImageUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">knowledgebase/post</argument>
+            <argument name="basePath" xsi:type="string">knowledgebase/post</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+                <item name="svg" xsi:type="string">svg</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="AudereCommerce\KnowledgeBase\Controller\Adminhtml\Post\ImageUpload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">AudereCommerce\KnowledgeBase\PostImageUpload</argument>
+        </arguments>
+    </type>
+    <virtualType name="AudereCommerce\KnowledgeBase\PostFileUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">knowledgebase/post</argument>
+            <argument name="basePath" xsi:type="string">knowledgebase/post</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="pdf" xsi:type="string">pdf</item>
+                <item name="xls" xsi:type="string">xls</item>
+                <item name="xlsx" xsi:type="string">xlsx</item>
+                <item name="rtf" xsi:type="string">rtf</item>
+                <item name="pub" xsi:type="string">pub</item>
+                <item name="ppt" xsi:type="string">ppt</item>
+                <item name="pptx" xsi:type="string">pptx</item>
+                <item name="doc" xsi:type="string">doc</item>
+                <item name="docx" xsi:type="string">docx</item>
+                <item name="zip" xsi:type="string">zip</item>
+                <item name="rar" xsi:type="string">rar</item>
+                <item name="tar" xsi:type="string">tar</item>
+                <item name="7z" xsi:type="string">7z</item>
+                <item name="csv" xsi:type="string">csv</item>
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="AudereCommerce\KnowledgeBase\Controller\Adminhtml\Post\FileUpload">
+        <arguments>
+            <argument name="fileUploader" xsi:type="object">AudereCommerce\KnowledgeBase\PostFileUpload</argument>
+        </arguments>
+    </type>
+    <preference for="AudereCommerce\KnowledgeBase\Api\CategoryManagementInterface" type="AudereCommerce\KnowledgeBase\Model\CategoryManagement" />
+    <preference for="AudereCommerce\KnowledgeBase\Api\PostManagementInterface" type="AudereCommerce\KnowledgeBase\Model\PostManagement" />
+    <preference for="AudereCommerce\KnowledgeBase\Api\CategoryRepositoryInterface" type="AudereCommerce\KnowledgeBase\Model\CategoryRepository" />
+    <preference for="AudereCommerce\KnowledgeBase\Api\PostRepositoryInterface" type="AudereCommerce\KnowledgeBase\Model\PostRepository" />
+    <type name="AudereCommerce\KnowledgeBase\Model\ResourceModel\Category\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">auderecommerce_knowledgebase_category</argument>
+            <argument name="eventPrefix" xsi:type="string">category_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">category_collection</argument>
+            <argument name="resourceModel" xsi:type="string">AudereCommerce\KnowledgeBase\Model\ResourceModel\Category</argument>
+        </arguments>
+    </type>
+    <type name="AudereCommerce\KnowledgeBase\Model\ResourceModel\Post\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">auderecommerce_knowledgebase_post</argument>
+            <argument name="eventPrefix" xsi:type="string">post_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">post_collection</argument>
+            <argument name="resourceModel" xsi:type="string">AudereCommerce\KnowledgeBase\Model\ResourceModel\Post</argument>
+        </arguments>
+    </type>
+    <preference for="AudereCommerce\KnowledgeBase\Api\ReportRepositoryInterface" type="AudereCommerce\KnowledgeBase\Model\ReportRepository" />
+</config>

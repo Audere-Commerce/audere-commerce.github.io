@@ -1,0 +1,17 @@
+<?php /* @var $block AudereCommerce\AudereCommerce\Block\Twitter\Feed */ ?>
+<?php $twitterPosts = $block->getTwitterPosts(3); ?>
+<?php if (count($twitterPosts)): ?>
+    <div class="widget block block-twitter-posts">
+        <div class="block-title">
+            <strong><?php echo __('Latest Tweets'); ?></strong>
+        </div>
+        <div class="twitter-posts">
+            <?php foreach($twitterPosts as $tweet): ?>
+                <div class="tweet">
+                    <div class="text"><?php echo $tweet->text; ?></div>
+                    <div class="published"><?php echo $block->getTimeAgo($tweet->created_at); ?></div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php endif; ?>

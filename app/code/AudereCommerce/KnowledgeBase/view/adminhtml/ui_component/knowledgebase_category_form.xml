@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">knowledgebase_category_form.knowledgebase_category_form_data_source</item>
+            <item name="deps" xsi:type="string">knowledgebase_category_form.knowledgebase_category_form_data_source</item>
+            <item name="namespace" xsi:type="string">knowledgebase_category_form</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">AudereCommerce\KnowledgeBase\Block\Adminhtml\Category\Edit\BackButton</item>
+            <item name="delete" xsi:type="string">AudereCommerce\KnowledgeBase\Block\Adminhtml\Category\Edit\DeleteButton</item>
+            <item name="save" xsi:type="string">AudereCommerce\KnowledgeBase\Block\Adminhtml\Category\Edit\SaveButton</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="childrenFromMeta" xsi:type="boolean">true</item>
+    </argument>
+    <dataSource name="knowledgebase_category_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">AudereCommerce\KnowledgeBase\Ui\DataProvider\Category\Form\CategoryDataProvider</argument>
+            <argument name="name" xsi:type="string">knowledgebase_category_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+                <item name="submit_url" xsi:type="url" path="knowledgebase/category/save" />
+            </item>
+        </argument>
+    </dataSource>
+</form>
